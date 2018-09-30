@@ -16,5 +16,10 @@ pipeline {
                 }
             }
         }
+        stage('Deliver') { 
+            steps {
+                sh 'java -jar /var/lib/jenkins/workspace/simple-java-maven-app/target/hello-world-1.0.0.jar' 
+            }
+        }
     }
 }
